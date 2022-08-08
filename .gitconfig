@@ -1,0 +1,37 @@
+[user]
+    name = Aleksandr Piatkin
+    useconfigonly = true
+[color]
+    ui = auto
+[push]
+    default = simple
+[core]
+    autocrlf = input
+    editor = vim
+    trustctime = false
+    filemode = true
+    symlinks = true
+[pull]
+    rebase = true
+[alias]
+    st = status -sb
+    lg = log --oneline --decorate --all --graph
+    co = checkout
+    cm = commit
+    br = branch
+    dc = diff --cached
+    a = add
+    aa = add --all
+    p = push
+    pt = push --tags
+    t = tag
+[merge]
+    ff = no
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[rebase]
+    autostash = true
+[includeIf "gitdir:~/Projects/github.com/hey-car/"]
+    path = ~/Projects/github.com/hey-car/.gitconfig-work

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+[ -e "$HOME/.hushlogin" ] || [ -h "$HOME/.hushlogin" ] && rm "$HOME/.hushlogin"
+ln -s "$PWD/.hushlogin" "$HOME/.hushlogin"
+
+[ -e "$HOME/.zshrc" ] || [ -h "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
+ln -s "$PWD/.zshrc" "$HOME/.zshrc"
+
+[ -e "$HOME/.gitconfig" ] || [ -h "$HOME/.gitconfig" ] && rm "$HOME/.gitconfig"
+ln -s "$PWD/.gitconfig" "$HOME/.gitconfig"
+
+[ -e "$HOME/.gitignore" ] || [ -h "$HOME/.gitignore" ] && rm "$HOME/.gitignore"
+ln -s "$PWD/.gitignore" "$HOME/.gitignore"
