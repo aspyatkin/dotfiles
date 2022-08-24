@@ -11,3 +11,20 @@ ln -s "$PWD/.gitconfig" "$HOME/.gitconfig"
 
 [ -e "$HOME/.gitignore" ] || [ -h "$HOME/.gitignore" ] && rm "$HOME/.gitignore"
 ln -s "$PWD/.gitignore" "$HOME/.gitignore"
+
+case "$OSTYPE" in
+  darwin*)
+    SUBLIME_TEXT_INSTALLED=`[ -d "$HOME/Library/Application Support/Sublime Text" ] && echo "yes" || echo "no"`
+    SUBLIME_TEXT_DIR="$HOME/Library/Application Support/Sublime Text/Packages/User"
+  ;;
+  *)
+    SUBLIME_TEXT_INSTALLED="no"
+    SUBLIME_TEXT_DIR=""
+  ;;
+esac
+
+if [ "$SUBLIME_TEXT_INSTALLED" = "yes" ] && [ ! -z "$SUBLIME_TEXT_DIR" ]
+then
+  [ -e "$SUBLIME_TEXT_DIR" ] || [ -h "$SUBLIME_TEXT_DIR" ] && rm "$SUBLIME_TEXT_DIR"
+  ln -s "$PWD/sublime-text" "$SUBLIME_TEXT_DIR"
+fi

@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"EditorConfig",
+		"Package Control",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-terraform",
+		"Tabnine",
+		"Terraform",
+	],
+}
