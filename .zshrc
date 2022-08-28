@@ -107,11 +107,6 @@ function chpwd () {
 
 PROMPT=$'$(ssh_prompt)$(user_host_prompt)$(pwd_prompt)${vcs_info_msg_0_}%E\n%B%(?.%F{green}.%F{red})⮞%f%b%E '
 
-if [ -x "$(command -v keychain)" ]; then
-  #eval `keychain --eval --quiet --nogui --noask --timeout 180 --agents ssh id_rsa id_ed25519`
-  eval `keychain --quiet --nogui --noask --timeout 180 --agents ssh,gpg --eval id_rsa id_ed25519 49DF34F1511B33D7`
-fi
-
 # user-friendly command output
 export CLICOLOR=1
 ls --color=auto &> /dev/null && alias ls='ls --color=auto'
@@ -138,3 +133,7 @@ fi
 export PATH="$UPDATED_PATH"
 
 export GPG_TTY=$(tty)
+
+if [ -x "$(command -v keychain)" ]; then
+  eval `keychain --quiet --nogui --noask --timeout 180 --agents ssh,gpg --eval id_rsa id_ed25519 49DF34F1511B33D7`
+fi
