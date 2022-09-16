@@ -34,5 +34,7 @@
     prompt = false
 [rebase]
     autostash = true
+[init]
+    defaultBranch = master
 [includeIf "gitdir:~/Projects/github.com/hey-car/"]
     path = ~/Projects/github.com/hey-car/.gitconfig-work
