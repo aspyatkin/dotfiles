@@ -122,10 +122,6 @@ alias .....='cd ../../../../'
 
 UPDATED_PATH="$PATH"
 
-if [ -d "/opt/homebrew/bin" ]; then
-  UPDATED_PATH="/opt/homebrew/bin:$UPDATED_PATH"
-fi
-
 if [ -d "$HOME/.rd/bin" ]; then
   UPDATED_PATH="$HOME/.rd/bin:$UPDATED_PATH"
 fi
@@ -134,6 +130,8 @@ export PATH="$UPDATED_PATH"
 
 export GPG_TTY=$(tty)
 
-if [ -x "$(command -v keychain)" ]; then
-  eval `keychain --quiet --nogui --noask --timeout 180 --agents ssh,gpg --eval id_rsa id_ed25519 49DF34F1511B33D7`
+export SSH_AUTH_SOCK="$HOME/.ssh/agent"
+
+if [ -d "/opt/homebrew/bin" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi

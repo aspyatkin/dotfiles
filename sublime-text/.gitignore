@@ -1,1 +1,3 @@
 *.user-ca-bundle
+sftp/
+SFTP.sublime-settings
