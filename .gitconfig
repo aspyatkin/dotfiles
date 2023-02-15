@@ -1,6 +1,7 @@
 [user]
     name = Aleksandr Piatkin
     useconfigonly = true
+    signingkey = 372CE806A036164F
 [color]
     ui = auto
 [push]
@@ -12,6 +13,8 @@
     trustctime = false
     filemode = true
     symlinks = true
+[commit]
+    gpgsign = true
 [pull]
     rebase = true
 [alias]
