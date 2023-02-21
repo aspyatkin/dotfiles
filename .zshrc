@@ -119,6 +119,7 @@ export LANG=en_US.UTF-8
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
 
 UPDATED_PATH="$PATH"
 
