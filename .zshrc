@@ -134,4 +134,5 @@ export SSH_AUTH_SOCK="$HOME/.ssh/agent"
 
 if [ -d "/opt/homebrew/bin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
+    export HOMEBREW_NO_AUTO_UPDATE="1"
 fi
