@@ -2,6 +2,7 @@
     name = Aleksandr Piatkin
     useconfigonly = true
     signingkey = 372CE806A036164F
+    email = 4273812+aspyatkin@users.noreply.github.com
 [color]
     ui = auto
 [push]
@@ -41,3 +42,4 @@
     defaultBranch = master
 [includeIf "gitdir:~/Projects/github.com/hey-car/"]
     path = ~/Projects/github.com/hey-car/.gitconfig-work
+

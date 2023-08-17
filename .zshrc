@@ -124,7 +124,12 @@ alias ......='cd ../../../../../'
 UPDATED_PATH="$PATH"
 
 if [ -d "$HOME/.rd/bin" ]; then
-  UPDATED_PATH="$HOME/.rd/bin:$UPDATED_PATH"
+  UPDATED_PATH="$UPDATED_PATH:$HOME/.rd/bin"
+fi
+
+if command -v pyenv &> /dev/null; then
+  UPDATED_PATH="$(pyenv root)/shims:$UPDATED_PATH"
+  eval "$(pyenv init -)"
 fi
 
 export PATH="$UPDATED_PATH"
@@ -137,3 +142,4 @@ if [ -d "/opt/homebrew/bin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export HOMEBREW_NO_AUTO_UPDATE="1"
 fi
+
