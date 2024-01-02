@@ -138,8 +138,11 @@ export GPG_TTY=$(tty)
 
 export SSH_AUTH_SOCK="$HOME/.ssh/agent"
 
-if [ -d "/opt/homebrew/bin" ]; then
+if [ -s "/opt/homebrew/bin/brew" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export HOMEBREW_NO_AUTO_UPDATE="1"
 fi
+
+[ -d "/opt/homebrew/opt/nvm" ] && export NVM_DIR="$HOME/.nvm"
+[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
 
