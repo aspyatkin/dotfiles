@@ -3,8 +3,9 @@
 	[
 		"Vintage",
 	],
-	"auto_complete": false,
+	"auto_complete": true,
 	"font_size": 16,
 	"font_face": "PragmataPro Mono Liga",
 	"font_options": ["no_round"],
+	"index_files": true,
 }

@@ -15,7 +15,6 @@
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-terraform",
-		"Tabnine",
 		"Terraform",
 	],
 }
