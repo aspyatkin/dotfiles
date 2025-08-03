@@ -143,6 +143,8 @@ if [ -s "/opt/homebrew/bin/brew" ]; then
     export HOMEBREW_NO_AUTO_UPDATE="1"
 fi
 
-[ -d "/opt/homebrew/opt/nvm" ] && export NVM_DIR="$HOME/.nvm"
-[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+alias cdmd='(){ cu=`whoami`; tg="$1"; cd "/Users/$cu/Library/Application Support/Mountain Duck/Volumes.noindex/$tg.localized"}'
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
