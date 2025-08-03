@@ -148,3 +148,5 @@ alias cdmd='(){ cu=`whoami`; tg="$1"; cd "/Users/$cu/Library/Application Support
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+alias gpg-yk-relearn='gpg-connect-agent "scd serialno" "learn --force" /bye'
