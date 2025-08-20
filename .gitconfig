@@ -14,6 +14,8 @@
     trustctime = false
     filemode = true
     symlinks = true
+    pager = diff-so-fancy | less --tabs=4 -RF
+    compression = 9
 [commit]
     gpgsign = true
 [pull]
@@ -40,6 +42,20 @@
     autostash = true
 [init]
     defaultBranch = master
-[includeIf "gitdir:~/Projects/github.com/hey-car/"]
-    path = ~/Projects/github.com/hey-car/.gitconfig-work
+[branch]
+    sort = -committerdate
+[tag]
+    sort = -version:refname
+[column]
+    ui = auto
+[interactive]
+    diffFilter = diff-so-fancy --patch
+[diff]
+    algorithm = histogram
+[maintenance]
+    auto = true
+    strategy = incremental
+[rerere]
+    enabled = true
+    autoUpdate = true
 

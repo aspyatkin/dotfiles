@@ -8,4 +8,6 @@
 	"font_face": "PragmataPro Mono Liga",
 	"font_options": ["no_round"],
 	"index_files": true,
+	"theme": "auto",
+	"color_scheme": "Mariana.sublime-color-scheme",
 }
